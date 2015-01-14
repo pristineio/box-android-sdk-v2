@@ -61,11 +61,13 @@ android {
 	}
 
 	libraryVariants.all { variant ->
-		def suffix = "${variant.mergedFlavor.versionName}"
-		def originalFile = variant.outputFile
-		def name = originalFile.name.replace(archivesBaseName, "${archivesBaseName}-${suffix}")
-		variant.outputFile = new File(originalFile.parent, name)
-	}
+        variant.outputs.each { output ->
+            def suffix = "${variant.mergedFlavor.versionName}"
+            def originalFile = output.outputFile
+            def name = originalFile.name.replace(archivesBaseName, "${archivesBaseName}-${suffix}")
+            output.outputFile = new File(originalFile.parent, name)
+        }
+    }
 }
 
 uploadArchives {
