@@ -28,7 +28,7 @@ configurations {
 dependencies {
 	archives "org.apache.maven.wagon:wagon-ssh:2.2"
 	compile "com.android.support:support-v4:20.+"
-	compile "net.box:boxjavalibv2:3.1.8"
+	compile "net.box:boxjavalibv2:3.2.1"
 	compile "com.fasterxml.jackson.core:jackson-annotations:2.2.2"
 	compile "com.fasterxml.jackson.core:jackson-core:2.2.2"
 	compile "com.fasterxml.jackson.core:jackson-databind:2.2.2"
@@ -42,7 +42,7 @@ dependencies {
 
 android {
 	compileSdkVersion 22
-	buildToolsVersion '21.0.2'
+	buildToolsVersion '21.1.2'
 
     lintOptions {
         abortOnError false
